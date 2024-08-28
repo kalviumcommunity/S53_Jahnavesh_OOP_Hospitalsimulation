@@ -10,7 +10,6 @@ class MainClass {
     System.out.println(Ram.getFullName());
     System.out.println(Ram.validateEmail());
     System.out.println(Raju.validateEmail());
-    System.out.println();
 
   }
 }
