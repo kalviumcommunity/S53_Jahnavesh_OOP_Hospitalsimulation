@@ -15,14 +15,19 @@ class MainClass {
     doctorsList.add(new Doctor("Cardiology", "Night Shift"));
     doctorsList.add(new Doctor("Neurology", "Day Shift"));
 
+    System.out.println("Doctors List:");
     for (Doctor doctor : doctorsList) {
       System.out.println(doctor.displayInfo());
     }
 
+    System.out.println("\nPatients List:");
     for (Patients patient : patientsList) {
       System.out.println(patient.displayInfo());
       System.out.println("Is email valid? " + patient.validateEmail());
       System.out.println();
     }
+
+    System.out.println("Total Patients: " + Patients.getTotalPatients());
+    System.out.println("Total Doctors: " + Doctor.getTotalDoctors());
   }
 }

@@ -1,16 +1,19 @@
 public class Patients {
-  
+
   private int ID;
   private String firstName;
   private String secondName;
   private String email;
   private int number;
+  
+  private static int totalPatients = 0;
 
   public Patients(String firstName, String secondName, String email, int number) {
     this.firstName = firstName;
     this.secondName = secondName;
     this.email = email;
     this.number = number;
+    totalPatients++;
   }
 
   public void setFirstName(String firstName) {
@@ -62,5 +65,9 @@ public class Patients {
 
   public boolean validateEmail() {
     return email.matches("^[A-Za-z0-9+_.-]+@(.+)$");
+  }
+
+  public static int getTotalPatients() {
+    return totalPatients;
   }
 }
