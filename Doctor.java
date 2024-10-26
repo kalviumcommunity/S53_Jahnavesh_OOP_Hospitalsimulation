@@ -10,6 +10,12 @@ public class Doctor {
       totalDoctors++;
   }
 
+  public Doctor() {
+    this.specialization = "Unknown";
+    this.duty = "Not Assigned";
+    System.out.println("Default constructor called");
+}
+
   public String getDuty() {
       return duty;
   }
