@@ -1,47 +1,56 @@
-public class Doctor {
-  private String specialization;
-  private String duty;
-  
-  private static int totalDoctors = 0;
+public class Doctor extends HospitalStaff {
+    private String specialization;
+    private String duty;
 
-  public Doctor(String specialization, String duty) {
-      this.specialization = specialization;
-      this.duty = duty;
-      totalDoctors++;
-  }
+    private static int totalDoctors = 0;
 
-  public Doctor() {
-    this.specialization = "Unknown";
-    this.duty = "Not Assigned";
-    System.out.println("Default constructor called");
-}
+    public Doctor(String name, String specialization, String duty) {
+        super(name, "Doctor");
+        this.specialization = specialization;
+        this.duty = duty;
+        totalDoctors++;
+    }
 
-  public String getDuty() {
-      return duty;
-  }
+    public Doctor() {
+        super("Unknown", "Doctor");
+        this.specialization = "Unknown";
+        this.duty = "Not Assigned";
+        System.out.println("Default constructor called");
+        totalDoctors++;
+    }
 
-  public void setDuty(String duty) {
-      this.duty = duty;
-  }
+    public String getDuty() {
+        return duty;
+    }
 
-  public String getSpecialization() {
-      return specialization;
-  }
+    public void setDuty(String duty) {
+        this.duty = duty;
+    }
 
-  public void setSpecialization(String specialization) {
-      this.specialization = specialization;
-  }
+    public String getSpecialization() {
+        return specialization;
+    }
 
-  public String displayInfo() {
-      return "Specialization: " + specialization + "\nDuty: " + duty;
-  }
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
+    }
 
-  public void assignDuty(String duty) {
-      this.duty = duty;
-      System.out.println("Doctor with specialization in " + specialization + " assigned to " + duty + ".");
-  }
+    @Override
+    public String displayInfo() {
+        return super.displayInfo() + "\nSpecialization: " + specialization + "\nDuty: " + duty;
+    }
 
-  public static int getTotalDoctors() {
-      return totalDoctors;
-  }
+    public void assignDuty(String duty) {
+        this.duty = duty;
+        System.out.println("Doctor with specialization in " + specialization + " assigned to " + duty + ".");
+    }
+
+    public static int getTotalDoctors() {
+        return totalDoctors;
+    }
+
+    @Override
+    public void workingHours() {
+        System.out.println(super.name + " works for 12 hours a day.");
+    }
 }

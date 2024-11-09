@@ -3,6 +3,7 @@ import java.util.ArrayList;
 class MainClass {
 
     public static void main(String[] args) {
+        // Patient list
         ArrayList<Patients> patientsList = new ArrayList<>();
         patientsList.add(new Patients("Ram", "Kumar", "Ram123@", 12345));
         patientsList.add(new Patients("Raju", "Ridhi", "RajuRidhi@gmail.com", 94402));
@@ -11,15 +12,19 @@ class MainClass {
             patientsList.get(i).assignID(i + 1);
         }
 
-        ArrayList<Doctor> doctorsList = new ArrayList<>();
-        doctorsList.add(new Doctor("Cardiology", "Night Shift"));
-        doctorsList.add(new Doctor("Neurology", "Day Shift"));
+        // // Doctor list
+        // ArrayList<Doctor> doctorsList = new ArrayList<>();
+        // doctorsList.add(new Doctor("Cardiology", "Night Shift"));
+        // doctorsList.add(new Doctor("Neurology", "Day Shift"));
 
-        System.out.println("Doctors List:");
-        for (Doctor doctor : doctorsList) {
-            System.out.println(doctor.displayInfo());
-        }
+        // // Displaying Doctor List
+        // System.out.println("Doctors List:");
+        // for (Doctor doctor : doctorsList) {
+        //     System.out.println(doctor.displayInfo());
+        //     System.out.println();
+        // }
 
+        // Displaying Patient List
         System.out.println("\nPatients List:");
         for (Patients patient : patientsList) {
             System.out.println(patient.displayInfo());
