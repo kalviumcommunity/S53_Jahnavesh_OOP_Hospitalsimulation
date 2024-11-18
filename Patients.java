@@ -4,7 +4,7 @@ public class Patients {
   private String secondName;
   private String email;
   private int number;
-  
+
   private static int totalPatients = 0;
 
   public Patients(String firstName, String secondName, String email, int number) {
