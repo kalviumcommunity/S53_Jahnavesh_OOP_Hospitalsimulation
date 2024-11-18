@@ -1,18 +1,10 @@
 public class HospitalStaff {
-    private String name;
-    private String role;
+    String name;
+    String role;
 
     public HospitalStaff(String name, String role) {
         this.name = name;
         this.role = role;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getRole() {
-        return role;
     }
 
     public void workingHours() {
@@ -21,5 +13,9 @@ public class HospitalStaff {
 
     public String displayInfo() {
         return "Name: " + name + "\nRole: " + role;
+    }
+
+    public void performDuty() {
+        System.out.println(name + " performs general hospital duties.");
     }
 }

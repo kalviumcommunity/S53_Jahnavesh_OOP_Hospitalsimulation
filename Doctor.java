@@ -11,38 +11,9 @@ public class Doctor extends HospitalStaff {
         totalDoctors++;
     }
 
-    public Doctor() {
-        super("Unknown", "Doctor");
-        this.specialization = "Unknown";
-        this.duty = "Not Assigned";
-        System.out.println("Default constructor called");
-        totalDoctors++;
-    }
-
-    public String getDuty() {
-        return duty;
-    }
-
-    public void setDuty(String duty) {
-        this.duty = duty;
-    }
-
-    public String getSpecialization() {
-        return specialization;
-    }
-
-    public void setSpecialization(String specialization) {
-        this.specialization = specialization;
-    }
-
     @Override
-    public String displayInfo() {
-        return super.displayInfo() + "\nSpecialization: " + specialization + "\nDuty: " + duty;
-    }
-
-    public void assignDuty(String duty) {
-        this.duty = duty;
-        System.out.println("Doctor with specialization in " + specialization + " assigned to " + duty + ".");
+    public void performDuty() {
+        System.out.println(super.name + " treats patients in the " + specialization + " department.");
     }
 
     public static int getTotalDoctors() {
@@ -50,7 +21,7 @@ public class Doctor extends HospitalStaff {
     }
 
     @Override
-    public void workingHours() {
-        System.out.println(getName() + " works for 12 hours a day.");
+    public String displayInfo() {
+        return super.displayInfo() + "\nSpecialization: " + specialization + "\nDuty: " + duty;
     }
 }

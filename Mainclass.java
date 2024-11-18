@@ -1,24 +1,26 @@
 import java.util.ArrayList;
 
 class MainClass {
-
     public static void main(String[] args) {
+        ArrayList<HospitalStaff> staffList = new ArrayList<>();
+
+        staffList.add(new HospitalStaff("John", "Nurse"));
+        staffList.add(new Doctor("Alice", "Cardiology", "Day Shift"));
+        staffList.add(new Surgeon("Dr. Smith", "Orthopedics", "Knee Replacement"));
+
+        System.out.println("Hospital Staff Duties:");
+        for (HospitalStaff staff : staffList) {
+            System.out.println(staff.displayInfo());
+            staff.performDuty();
+            System.out.println();
+        }
+
         ArrayList<Patients> patientsList = new ArrayList<>();
-        patientsList.add(new Patients("Ram", "Kumar", "Ram123@", 12345));
+        patientsList.add(new Patients("Ram", "Kumar", "Ram123@gmail.com", 12345));
         patientsList.add(new Patients("Raju", "Ridhi", "RajuRidhi@gmail.com", 94402));
 
         for (int i = 0; i < patientsList.size(); i++) {
             patientsList.get(i).assignID(i + 1);
-        }
-
-        ArrayList<Surgeon> surgeonsList = new ArrayList<>();
-        surgeonsList.add(new Surgeon("Dr. Asha", "Cardiology", "Night Shift", "Heart Surgery"));
-        surgeonsList.add(new Surgeon("Dr. Ravi", "Neurology", "Day Shift", "Brain Surgery"));
-
-        System.out.println("Surgeons List:");
-        for (Surgeon surgeon : surgeonsList) {
-            System.out.println(surgeon.displayInfo());
-            System.out.println();
         }
 
         System.out.println("\nPatients List:");
