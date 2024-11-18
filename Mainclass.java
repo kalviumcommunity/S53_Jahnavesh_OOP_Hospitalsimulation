@@ -4,7 +4,6 @@ class MainClass {
     public static void main(String[] args) {
         ArrayList<HospitalStaff> staffList = new ArrayList<>();
 
-        staffList.add(new HospitalStaff("John", "Nurse"));
         staffList.add(new Doctor("Alice", "Cardiology", "Day Shift"));
         staffList.add(new Surgeon("Dr. Smith", "Orthopedics", "Knee Replacement"));
 

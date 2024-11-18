@@ -8,7 +8,7 @@ public class Surgeon extends Doctor {
 
   @Override
   public void performDuty() {
-      System.out.println(super.name + " performs " + surgeryType + " surgeries.");
+      System.out.println(name + " performs " + surgeryType + " surgeries.");
   }
 
   @Override

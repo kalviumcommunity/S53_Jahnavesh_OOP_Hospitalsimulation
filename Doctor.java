@@ -13,7 +13,7 @@ public class Doctor extends HospitalStaff {
 
     @Override
     public void performDuty() {
-        System.out.println(super.name + " treats patients in the " + specialization + " department.");
+        System.out.println(name + " treats patients in the " + specialization + " department.");
     }
 
     public static int getTotalDoctors() {
