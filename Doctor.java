@@ -51,6 +51,6 @@ public class Doctor extends HospitalStaff {
 
     @Override
     public void workingHours() {
-        System.out.println(super.name + " works for 12 hours a day.");
+        System.out.println(getName() + " works for 12 hours a day.");
     }
 }
