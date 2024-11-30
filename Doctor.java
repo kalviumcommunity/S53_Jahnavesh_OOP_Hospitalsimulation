@@ -1,7 +1,6 @@
 public class Doctor extends HospitalStaff {
     private String specialization;
     private String duty;
-
     private static int totalDoctors = 0;
 
     public Doctor(String name, String specialization, String duty) {
